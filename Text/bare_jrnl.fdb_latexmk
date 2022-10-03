@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1664766972 "c:/Users/vitor/Documents/Repos/Moneyball_22_2/Text/bare_jrnl.tex" "bare_jrnl.pdf" "bare_jrnl" 1664766973
+["pdflatex"] 1664767118 "c:/Users/vitor/Documents/Repos/Moneyball_22_2/Text/bare_jrnl.tex" "bare_jrnl.pdf" "bare_jrnl" 1664767120
   "C:/Users/vitor/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1664765239 333163 292f10f8c6bc344c130f1830629ca1f0 ""
   "C:/Users/vitor/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1662510471 10374549 f6249a3d3ae185c6472ff5ebfc063d0f ""
   "C:/Users/vitor/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -30,10 +30,11 @@
   "C:/Users/vitor/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1661237706 30737 1b92a9b24781f898fb8680eb9038ebfb ""
   "C:/Users/vitor/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1ptm.fd" 1585253778 1007 15056f4a61917ceed3a44e4ac11fcc52 ""
   "IEEEtran.cls" 1664764821 201134 c78fa934a952bc8c79fc642579aea5fb ""
-  "bare_jrnl.aux" 1664766973 541 4b024570741bf3ee8b07c064d4e7ecab "pdflatex"
-  "bare_jrnl.tex" 1664766968 17004 77a422da0eeccfade1357af40a0f87e8 ""
-  "c:/Users/vitor/Documents/Repos/Moneyball_22_2/Text/bare_jrnl.tex" 1664766968 17004 77a422da0eeccfade1357af40a0f87e8 ""
+  "bare_jrnl.aux" 1664767119 539 acb603c48ac6e9e418cc4306b05ca36d "pdflatex"
+  "bare_jrnl.tex" 1664767114 17001 a0da459ff2f65944829c2873b88827e8 ""
+  "c:/Users/vitor/Documents/Repos/Moneyball_22_2/Text/bare_jrnl.tex" 1664767114 17001 a0da459ff2f65944829c2873b88827e8 ""
   "sections/conclusion.tex" 1664765943 20 64242578a9a4cffc2fc6b667d39ff639 ""
+  "sections/context.tex" 1664766013 18 0a66b025cb78a248e7210ec9a5476047 ""
   "sections/intro.tex" 1664765667 22 eec4c8b8528f3e8adcb842fabce63cd0 ""
   "sections/modeling.tex" 1664765958 19 f9967b12fc9b9cfd1827bcbca994fb1d ""
   (generated)

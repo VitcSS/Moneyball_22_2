@@ -77,10 +77,10 @@ INPUT sections\intro.tex
 INPUT .\sections\intro.tex
 INPUT sections\intro.tex
 INPUT C:\Users\vitor\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmrc7t.tfm
-INPUT .\sections\conclusion.tex
-INPUT sections\conclusion.tex
-INPUT .\sections\conclusion.tex
-INPUT sections\conclusion.tex
+INPUT .\sections\context.tex
+INPUT sections\context.tex
+INPUT .\sections\context.tex
+INPUT sections\context.tex
 INPUT .\sections\modeling.tex
 INPUT sections\modeling.tex
 INPUT .\sections\modeling.tex
