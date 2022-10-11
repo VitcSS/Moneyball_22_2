@@ -1,1 +1,79 @@
 \section{Modelagem}
+
+O objetivo é utilizando a base de dados de atletas da temporada regular da NBA 2021-22 e o mapa salarial dos 
+atletas para temporada 2022-23, formular o melhor time possível, gastando o mínimo possível. O time em questão 
+será formado por doze jogadores, dirtribuídos na entre as posições da seguinte forma.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Posição} & \textbf{Sigla} & \textbf{Total de Jogadores} \\ \hline
+    Armador          & PG             & 3                           \\ \hline
+    Ala-armador      & SG             & 2                           \\ \hline
+    Ala              & SF             & 2                           \\ \hline
+    Ala de força     & PF             & 3                           \\ \hline
+    Pivô             & C              & 2                           \\ \hline
+    \end{tabular}
+\end{table}
+\subsection{Função Objetivo}
+O problema possui duas funções objetivo uma que define a qualidade do time que foi montado e a outra que define o custo total 
+do time. A função de avaliação pode ser descrita da seguinte forma:
+\begin{equation}
+    f_{1}(x) = \frac{1}{N}\sum_{i=1}^{N}\sum_{j=1}^{M}P_{j}E_{j}(i)x_i
+\end{equation}
+Aonde :
+\begin{itemize}
+    \item \(i\) é o índice númerico que representa o jogador
+    \item \(x_i\) é um vetor binário que indica se o jogador pertence ou não ao time formulado
+    \item \(E_1(i)\) é o total de pontos por jogo
+    \item \(E_2(i)\) é o número de assitências por jogo
+    \item \(E_3(i)\) é o número de roubos por jogo 
+    \item \(E_4(i)\) é o número de bloqueios por jogo 
+    \item \(E_5(i)\) é o número de rebotes por jogo
+    \item \(E_7(i)\) é o número de turnovers por jogo
+    \item \(E_8(i)\) é o número de faltas por jogo
+    \item \(P_{j}\) é um vetor de contantes de peso para cada um dos parâmetros contabilizados, aonde :
+    \begin{itemize}
+        \item \(P_{j} > 0, j \leq 6 \)
+        \item \(P_{j} < 0, 7 \leq j \leq 8\)
+    \end{itemize}
+    \item \(M\) é o total de parâmetros utilizados
+    \item \(N\) é o total de jogadores
+\end{itemize}
+
+Todos os valores serão usados pós normalização para evitar que valores muito grandes como a pontução, quando comparado ao número de faltas, por exemplo,
+force uma tendência sobre o modelo.
+
+O custo do time poderá ser descrito da seguinte forma :
+
+\begin{equation}
+    f_2(x) = \sum_{i=1}^{N}S(i)x_i
+\end{equation}
+Aonde :
+\begin{itemize}
+    \item \(S(i)\) é uma função que para um índice de indetificação do jogador, retorna o salário pago a ele
+    \item \(x_i\) é um vetor binário que indica se o jogador pertence ou não ao time formulado
+\end{itemize}
+\subsection{Restrições}
+As únicas restrições usadas nesse modelo serão as de quantidade de jogadores por posição já expressadas anteriormente.
+\subsection{Modelagem Formal}
+\begin{equation}
+    \begin{cases} 
+        \max f_{1}(x) = \frac{1}{N}\sum_{i=1}^{N}\sum_{j=1}^{M}P_{j}E_{j}(i)x_i \\
+        \min f_2(x) = \sum_{i=1}^{N}S(i)x_i
+    \end{cases}
+\end{equation}
+\begin{equation*}
+    \text{Sujeito a :} \\
+    \begin{cases}
+        \sum^{i=1}_{N}P_g(i)x_i \leq 3 \\
+        \sum^{i=1}_{N}S_g(i)x_i \leq 2 \\
+        \sum^{i=1}_{N}S_f(i)x_i \leq 2 \\
+        \sum^{i=1}_{N}P_f(i)x_i \leq 3 \\
+        \sum^{i=1}_{N}C(i)x_i \leq 2 
+    \end{cases}
+\end{equation*}
+Por se tratar de um sistema multivariável e não completamente mapeado é correto assumir que tratasse de um problema de otimização linear multimodal, pois é correto assumir
+que existam diversas combinações possíveis de times. O algoritmo que se pretende usar seria um algoritmo evolucionário modelado especificamente para 
+o problema em razão do número de variáveis que o sitema apresenta.
+

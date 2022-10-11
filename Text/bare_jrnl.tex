@@ -122,6 +122,7 @@
                         % graphicx package (see above). The psfrag package
                         % and documentation can be obtained at:
                         % http://www.ctan.org/tex-archive/macros/latex/contrib/supported/psfrag/
+\usepackage{amsmath}
 
 %\usepackage{subfigure} % Written by Steven Douglas Cochran
                         % This package makes it easy to put subfigures
@@ -262,7 +263,7 @@
 \begin{document}
 %
 % paper title
-\title{Moneyball - Definição de times da NBA baseada em estátisticas visando maior perfomance por dolar gasto.}
+\title{Moneyball - Definição de times da NBA baseada em estatísticas visando maior performance por dólar gasto}
 %
 %
 % author names and IEEE memberships
@@ -309,12 +310,6 @@
 
 % make the title area
 \maketitle
-
-
-\begin{abstract}
-The abstract goes here.
-\end{abstract}
-
 \begin{keywords}
 Moneyball, NBA, Multiobjective Optimization 
 \end{keywords}
@@ -327,17 +322,26 @@ Moneyball, NBA, Multiobjective Optimization
 % For peerreview papers, inserts a page break and creates the second title.
 % Will be ignored for other modes.
 % \IEEEpeerreviewmaketitle
+\input{sections/resu.tex}
 \input{sections/intro.tex}
-\input{sections/context.tex}
 \input{sections/modeling.tex}
-\input{sections/conclusion.tex}
 
 \begin{thebibliography}{1}
 
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to {\LaTeX}}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+\bibitem{I}
+Kubatko J, Oliver D, Pelton K, Rosenbaum D. A Starting Point for Analyzing Basketball 
+Statistics. Journal of Quantitative Analysis in Sports. 2007;3(3):1–24.
 
+\bibitem{II}
+Ahmed F, Deb K, Jindal A. Multi-objective optimization and decision making approaches 
+to cricket team selection. Applied Soft Computing. 2013;13(1):402–14.
+
+\bibitem{III}
+Ahmed F, Deb K, Jindal A. Evolutionary multi-objective optimization and decision making approaches to cricket team selection. In: Panigrahi BK, Suganthan PN, Das S, Satapathy SC, editors. Swarm, Evolutionary, and Memetic Computing. SEMCCO 2011: Proceedings of the Second International 
+Conference on Swarm, Evolutionary, and Memetic Computing; Berlin, Heidelberg: Springer-Verlag; 2011. p. 71–78.
+
+\bibitem{IV}
+García J, Ibáñez SJ, Martinez De Santos R, Leite N, Sampaio J. Identifying Basketball Performance Indicators in Regular Season and Playoff Games. Journal of Human Kinetics. 2013;36:161–8. pmid:23717365
 \end{thebibliography}
 
 \end{document}
